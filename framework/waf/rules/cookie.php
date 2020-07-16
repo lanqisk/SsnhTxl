@@ -1,0 +1,20 @@
+<?php
+return [
+    '\.\.\/\.\.\/',
+    '(?:etc\/\W*passwd)',
+    '(gopher|doc|php|glob|file|phar|zlib|ftp|ldap|dict|ogg|data)\:\/',
+    'base64_decode\(',
+    '\$_(GET|post|cookie|files|session|env|phplib|GLOBALS|SERVER)\[',
+    '\b(or|xor|and)\b.*(=|<|>|\'|")',
+    'select.+(from|limit)',
+    '(?:(union(.*?)select))',
+    'having|load_file',
+    'sleep\((\s*)(\d*)(\s*)\)',
+    'benchmark\((.*)\,(.*)\)',
+    '(?:from\W+information_schema\W)',
+    '(?:(?:current_)user|database|schema|connection_id)\s*\(',
+    'into(\s+)+(?:dump|out)file\s*',
+    'group\s+by.+\(',
+    '\<(iframe|script|body|img|layer|div|meta|style|base|object|input)',
+    '(onmouseover|onerror|onload)\='
+];
